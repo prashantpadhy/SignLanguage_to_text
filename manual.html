@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <h1>SIGN LANGUAGE TO SPEECH CONVERTER</h1>
+
+    <div class="topnav">
+        <a href="{{url_for('index')}}">Home</a>
+        <a class="active" href="{{url_for('manual')}}">Manual</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+        <a href="{{url_for('about')}}">About</a>
+    </div>
+
+    <h2>Manual for Sign Language to Speech Converter</h2>
+    <p>This system converts sign language to speech.<br>It is used by deaf, dumb and blind people.<br><b>Use only right hand while showing hand gestures</b><br></p>
+</body>
+</html>

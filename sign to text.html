@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language to Speech Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>SIGN LANGUAGE TO SPEECH CONVERTER</h1>
+
+    <div class="topnav">
+        <a class="active" href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('manual')}}">Manual</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+        <a href="{{url_for('about')}}">About</a>
+    </div>
+    
+    <div style="padding-left:16px">
+        <h2>Instructions</h2>
+        <ol>
+            <li>Use only right hand for showing hand gestures</li>
+            
+        </ol>
+        <div style="width: 100%; display: flex; align-items: center; flex-direction: column; ">
+            <div >
+              <img style="border: 9px solid black;" class="center" src="{{ url_for('video_feed') }}">
+            </div>
+            
+    
+            <div style="margin:40px 0px;"><button style="
+              background-color: #d83d3d; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+              " type="button" id="video-off">Stop</button></div>
+        </div>
+        
+        
+    </div>
+
+    <!-- insert camera here -->
+        
+    </div>
+
+<script>
+  let video_off_btn=document.getElementById("video-off");
+
+  let url="/video_off";
+  video_off_btn.addEventListener("click",()=>{
+    video_off_action();
+  })
+  function video_off_action(){
+    fetch(url).then((response)=>{
+      return response.text();
+    }).then((data)=>{
+      console.log(data);
+    })
+  }
+  
+</script>
+    
+</body>
+</html>

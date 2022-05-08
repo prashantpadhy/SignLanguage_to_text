@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <h1>SIGN LANGUAGE TO SPEECH CONVERTER</h1>
+
+    <div class="topnav">
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('manual')}}">Manual</a>
+        <a class="active" href="{{url_for('contact')}}">Contact</a>
+        <a href="{{url_for('about')}}">About</a>
+    </div>
+
+    <form>
+        <h4>Please fill the form <br>We will get back to you<form action="" class=""></form></h4>
+        <p>First name</p>
+        <input type="text" name="firstname" id="firstname" required>
+        <p>Last name</p>
+        <input type="text" name="lastname" id="lastname" required>
+        <p>Email address</p>
+        <input type="email" name="emailadd" id="emailadd" required>
+        <p>Contact number</p>
+        <input type="number" name="contact" id="contact" required>
+        <p>Your message</p>
+        <input type="text" name="message" id="message" required> <br> <br>
+        <input type="submit" value="Submit" style="padding: 16px; ">
+    </form>
+
+</body>
+</html>

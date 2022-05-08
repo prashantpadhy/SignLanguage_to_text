@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <h1>SIGN LANGUAGE TO SPEECH CONVERTER</h1>
+
+    <div class="topnav">
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('manual')}}">Manual</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+        <a class="active" href="{{url_for('about')}}">About</a>
+    </div>
+
+    <h3>Speech  impaired  people  use  hand  signs  and  gestures  to  communicate. Normal  people  face  difficulty  in  understanding  their  language.  Hence  there  is  a  need of  a  system  which  recognizes  the  different  signs,  gestures  and  conveys  the  information to  the  normal  people.  It  bridges  the  gap  between  physically  challenged  people  and normal people. </h3>
+    
+    <h3>The foremost aim of our system is to provide communication between common people and those with hearing aid without need of any specific color background, hand gloves or any sensors. Other systems used image dataset as such in .jpg format. But in our system the pixel values of each images are stored in csv file which reduces the memory requirement of the system. Also, the accuracy of prediction is high when csv dataset is used.</h3>
+    
+</body>
+</html>
